@@ -6,10 +6,16 @@
   "license": "MPL-2.0",
   "type": "module",
   "devDependencies": {
-    "@types/node": "^20.5.7",
-    "typescript": "^5.2.2"
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.13.7",
+    "@types/nodemailer": "^6.4.17",
+    "bcryptjs": "^3.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "typescript": "^5.8.0"
   },
   "dependencies": {
-    "encore.dev": "^1.46.5"
+    "dotenv": "^16.4.7",
+    "encore.dev": "^1.46.6",
+    "nodemailer": "^6.10.0"
   }
 }
