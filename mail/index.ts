@@ -7,7 +7,7 @@ export async function sendMail(
   from: string = "Encore Auth"
 ) {
   const transport = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: process.env.SMTP_HOST,
     port: 465,
     secure: true,
     auth: {
