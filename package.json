@@ -6,8 +6,11 @@
   "license": "MPL-2.0",
   "type": "module",
   "devDependencies": {
-    "@types/node": "^20.5.7",
-    "typescript": "^5.2.2"
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.13.7",
+    "bcryptjs": "^3.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "typescript": "^5.8.0"
   },
   "dependencies": {
     "encore.dev": "^1.46.5"
