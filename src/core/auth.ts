@@ -2,7 +2,6 @@ import { APIError, Gateway } from "encore.dev/api";
 import { authHandler } from "encore.dev/auth";
 import jwt, { JwtPayload } from "jsonwebtoken";
 import { AuthParams } from "../interface";
-import { roles } from "../util/roles";
 
 interface AuthData {
   userID: string;
@@ -31,11 +30,11 @@ const auth = authHandler(async (params: AuthParams): Promise<AuthData> => {
     }
 
     // Ensure userID exists in token payload
-    if (!res.userID) {
+    if (!res.userid) {
       throw APIError.unauthenticated("Invalid token payload");
     }
 
-    return { userID: res.userID };
+    return { userID: res.userid };
   } catch (error) {
     throw APIError.unauthenticated("Invalid or expired token");
   }

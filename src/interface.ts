@@ -5,12 +5,8 @@ export interface LoginBody {
   password: string;
 }
 
-export interface LoginResponse {
+export interface LoginResponse extends BaseAuthParams {
   message: string;
-  refreshToken: Header<"Set-Cookie">;
-  csrfToken: Header<"Set-Cookie">;
-  xcsrfToken: Header<"X-CSRF-Token">;
-  authorization: Header<"Authorization">;
 }
 
 export interface RegisterBody extends LoginBody {
@@ -20,5 +16,12 @@ export type LogoutResponse = Omit<
   LoginResponse,
   "xcsrfToken" | "authorization"
 >;
+
+export type BaseAuthParams = {
+  refreshToken: Header<"Set-Cookie">;
+  csrfToken: Header<"Set-Cookie">;
+  xcsrfToken: Header<"X-CSRF-Token">;
+  authorization: Header<"Authorization">;
+};
 
 export type AuthParams = Pick<LoginResponse, "authorization">;

@@ -2,7 +2,7 @@ import { api } from "encore.dev/api";
 import { LogoutResponse } from "../interface";
 
 export const logoutUser = api(
-  { method: "POST", path: "/logout", expose: true },
+  { auth: true, method: "POST", path: "/logout", expose: true },
   async (): Promise<LogoutResponse> => {
     return {
       message: "Logout successful!",
