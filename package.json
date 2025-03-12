@@ -6,6 +6,7 @@
   "license": "MPL-2.0",
   "type": "module",
   "devDependencies": {
+    "@carbon/charts-svelte": "^1.23.0",
     "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^22.13.7",
     "@types/nodemailer": "^6.4.17",

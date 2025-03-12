@@ -4,7 +4,7 @@ import "dotenv/config";
 export async function sendMail(
   email: string,
   token: string,
-  from: string = "Encore Auth"
+  from: string = process.env.MAIL_FROM_NAME || "",
 ) {
   const transport = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
